@@ -10,8 +10,7 @@ public class Main {
 
         System.out.println("Digite a temperatura em graus Celsius:");
         double celsius = input.nextDouble();
-        // Fórmula modificada, pois na atividade estava incorreta
-        double fahrenheit = (celsius * 9 / 5) + 32;
+        double fahrenheit = (9 * celsius + 160) / 5;
         System.out.println("\nA temperatura de " + celsius + " graus Celsius é equivalente a " + fahrenheit + " graus Fahrenheit.");
 
     }
