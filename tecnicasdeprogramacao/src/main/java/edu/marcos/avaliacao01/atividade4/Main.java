@@ -1,4 +1,4 @@
-package edu.marcos.atividade4;
+package edu.marcos.avaliacao01.atividade4;
 
 import java.util.Scanner;
 
