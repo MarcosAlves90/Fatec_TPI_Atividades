@@ -25,7 +25,7 @@ public class Main {
     }
 
     public static boolean verificarIdadeInvalida(int idade) {
-        return ((idade / abs(idade) != 1));
+        return (idade != abs(idade));
     }
 
 }
