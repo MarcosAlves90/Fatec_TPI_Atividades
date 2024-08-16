@@ -5,10 +5,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        double valorProduto = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do produto: "));
+        String valorInserido = JOptionPane.showInputDialog("Digite o valor do produto: ");
+        try {
+            double valorProduto = Double.parseDouble(valorInserido);
+            JOptionPane.showMessageDialog(null, "O valor da venda é: R$" +
+                    (calcularValorVenda(valorProduto)), "Resultado: ", JOptionPane.INFORMATION_MESSAGE);
+        } catch (NumberFormatException e) {
+            invocarErro();
+        }
 
-        JOptionPane.showMessageDialog(null, "O valor da venda é: R$" + (valorProduto < 20 ? valorProduto * 1.45 : valorProduto * 1.3), "Resultado: ", JOptionPane.INFORMATION_MESSAGE);
+    }
 
+    public static void invocarErro() {
+        JOptionPane.showMessageDialog(null, "Valor inválido", "Erro: ", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public static double calcularValorVenda(double valor) {
+        return valor < 20 ? valor * 1.45 : valor * 1.3;
     }
 
 }
