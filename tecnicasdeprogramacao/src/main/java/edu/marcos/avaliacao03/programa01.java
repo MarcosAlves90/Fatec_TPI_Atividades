@@ -28,7 +28,7 @@ public class programa01 {
             if (i % 2 != 0) {
                 i += valorInicial < valorFinal ? 1 : -1;
             }
-            numbersList.append(" ").append(String.valueOf(i));
+            numbersList.append(" ").append(i);
         }
         JOptionPane.showMessageDialog(null,numbersList, "Resultado: ", JOptionPane.INFORMATION_MESSAGE);
 
