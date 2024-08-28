@@ -20,18 +20,17 @@ public class programa04 {
             double media = (p1 * 0.35) + (p2 * 0.35) + (trabalho * 0.30);
             JOptionPane.showMessageDialog(null, String.format("Média Ponderada: %.2f", media), "Resultado: ", JOptionPane.INFORMATION_MESSAGE);
             if (media < 6) {
-                do {
-                    try {
-                        p3 = Integer.parseInt(JOptionPane.showInputDialog("Digite a nota da p3: "));
-                        if (p3 < 0) {
-                            throw new Exception("Valores_negativos");
-                        } else if (p3 > 10) {
-                            throw new Exception("Limite_ultrapassado");
-                        }
-                    } catch (Exception e) {
-                        invocarErro();
+                try {
+                    p3 = Integer.parseInt(JOptionPane.showInputDialog("Digite a nota da p3: "));
+                    if (p3 < 0) {
+                        throw new Exception("Valores_negativos");
+                    } else if (p3 > 10) {
+                        throw new Exception("Limite_ultrapassado");
                     }
-                } while (p3 == -1);
+                } catch (Exception e) {
+                    invocarErro();
+                    System.exit(0);
+                }
             } else {
                 mostrarResultadoFinal(media);
             }
@@ -50,7 +49,7 @@ public class programa04 {
     }
 
     public static void invocarErro() {
-        JOptionPane.showMessageDialog(null, "Valor inválido", "Erro: ", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Valores inválidos", "Erro: ", JOptionPane.ERROR_MESSAGE);
     }
 
     public static void mostrarResultadoFinal(double media) {
