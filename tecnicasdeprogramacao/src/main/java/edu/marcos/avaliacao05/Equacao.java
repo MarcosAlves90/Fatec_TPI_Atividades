@@ -42,6 +42,7 @@ public class Equacao {
 
     public static void main(String[] args) {
         Equacao equacao = Equacao.lerValores();
+        assert equacao != null;
         Double[] resultados = equacao.calcularRaizes();
         String mensagem = (resultados[0] == null) ? "Não existem raízes reais!" : 
                 (resultados[1] == null) ? String.format("As raízes R1 e R2 são: %f", resultados[0]) : 
