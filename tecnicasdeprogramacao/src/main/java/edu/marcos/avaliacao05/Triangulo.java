@@ -2,6 +2,8 @@ package edu.marcos.avaliacao05;
 
 import javax.swing.JOptionPane;
 
+// TPI-5 Primeiro Programa
+
 public class Triangulo {
     private final double base;
     private final double altura;
