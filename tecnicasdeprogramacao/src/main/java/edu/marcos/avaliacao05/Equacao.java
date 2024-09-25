@@ -16,16 +16,15 @@ public class Equacao {
     }
 
     public static Equacao lerValores() {
-        while (true) {
-            try {
-                int a = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor A:"));
-                int b = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor B:"));
-                int c = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor C:"));
-                return new Equacao(a, b, c);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "O valor deve ser numérico.", "Erro", JOptionPane.ERROR_MESSAGE);
-            }
+        try {
+            int a = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor A:"));
+            int b = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor B:"));
+            int c = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor C:"));
+            return new Equacao(a, b, c);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "O valor deve ser numérico.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
+        return null;
     }
     
     public Double[] calcularRaizes() {
