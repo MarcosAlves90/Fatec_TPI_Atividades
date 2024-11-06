@@ -1,4 +1,4 @@
-package edu.marcos.avaliacao08;
+package edu.marcos.avaliacao08_netbeans;
 
 import javax.swing.*;
 import java.awt.*;

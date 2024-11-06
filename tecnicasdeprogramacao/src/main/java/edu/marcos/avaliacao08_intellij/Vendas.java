@@ -1,7 +1,6 @@
-package edu.marcos.avaliacao08;
+package edu.marcos.avaliacao08_intellij;
 
 import javax.swing.*;
-import java.awt.event.ActionListener;
 
 public class Vendas {
     private JPanel mainPanel;
